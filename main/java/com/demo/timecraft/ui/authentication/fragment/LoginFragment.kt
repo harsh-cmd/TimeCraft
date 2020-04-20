@@ -27,7 +27,7 @@ class LoginFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         spinnerCountryCode.adapter =
-            SpinnerAdapter(requireContext(), android.R.layout.simple_list_item_1, contryCodeList())
+            SpinnerAdapter(requireContext(), android.R.layout.simple_list_item_1, countryCodeList())
 
         imageButtonNextScreen.setOnClickListener {
             if (validation()) {
@@ -40,7 +40,7 @@ class LoginFragment : BaseFragment() {
 
     }
 
-    private fun contryCodeList(): ArrayList<String> {
+    private fun countryCodeList(): ArrayList<String> {
         val list = ArrayList<String>()
         list.add("+00")
         list.add("+01")
