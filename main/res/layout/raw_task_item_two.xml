@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/constraintLayoutSimpleTask"
+
+    android:layout_margin="@dimen/_10dp"
+    android:background="@drawable/bg_recycle_view"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewTask"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:layout_margin="@dimen/_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_task" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20dp"
+        android:text="@string/dummy_job_message"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_10dp"
+        app:layout_constraintStart_toEndOf="@id/imageViewTask"
+        app:layout_constraintTop_toTopOf="@id/imageViewTask" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewTagNew"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="@dimen/_30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_tag_new" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainLayoutOptionMenu"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/bg_transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDelete"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            app:layout_constraintVertical_chainStyle="packed"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintEnd_toStartOf="@id/imageViewComplete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_delete"
+            app:layout_constraintBottom_toTopOf="@id/textViewDelete"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_delete"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageViewDelete"
+            app:layout_constraintStart_toStartOf="@id/imageViewDelete"
+            app:layout_constraintTop_toBottomOf="@id/imageViewDelete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewComplete"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            app:layout_constraintEnd_toStartOf="@id/imageViewShare"
+            app:layout_constraintStart_toEndOf="@id/imageViewDelete"
+            app:layout_constraintTop_toTopOf="@id/imageViewDelete"
+            app:srcCompat="@drawable/ic_rigth_red" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_complete"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@id/imageViewComplete"
+            app:layout_constraintStart_toStartOf="@id/imageViewComplete"
+            app:layout_constraintTop_toBottomOf="@id/imageViewComplete"
+            app:layout_constraintTop_toTopOf="@id/textViewDelete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewShare"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewComplete"
+            app:layout_constraintTop_toTopOf="@id/imageViewComplete"
+            app:srcCompat="@drawable/ic_share" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_share"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@id/imageViewShare"
+            app:layout_constraintStart_toStartOf="@id/imageViewShare"
+            app:layout_constraintTop_toBottomOf="@id/imageViewShare"
+            app:layout_constraintTop_toTopOf="@id/textViewComplete" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

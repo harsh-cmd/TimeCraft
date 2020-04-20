@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet">
+
+    <View
+        android:id="@+id/viewTopLine"
+        android:layout_width="@dimen/_30dp"
+        android:layout_height="4dp"
+        android:layout_marginTop="@dimen/_20dp"
+        android:background="@color/colorRed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTopLine">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainLayoutAppointmentDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10dp"
+                android:background="@drawable/bg_recycle_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewSalon"
+                    android:layout_width="@dimen/_60dp"
+                    android:layout_height="@dimen/_60dp"
+                    android:layout_margin="@dimen/_20dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_salon_image" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewShopName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/label_shop_name"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/_20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/imageViewSalon"
+                    app:layout_constraintTop_toTopOf="@id/imageViewSalon" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:background="@color/colorWhite"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_heart"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/imageViewSalon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAppointmentMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:lineSpacingExtra="@dimen/_5dp"
+                    android:text="@string/label_appoietment_message"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="@id/imageViewSalon"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewSalon" />
+
+                <View
+                    android:id="@+id/viewDottedLineOne"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_7dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:background="@drawable/line_dotted"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/textViewAppointmentMessage"
+                    app:layout_constraintTop_toBottomOf="@id/textViewAppointmentMessage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewWorkingHour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:text="@string/label_working_hours"
+                    android:textColor="@color/colorLightBlack"
+                    app:layout_constraintStart_toStartOf="@id/viewDottedLineOne"
+                    app:layout_constraintTop_toBottomOf="@id/viewDottedLineOne" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_circle_green"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:text="@string/label_open"
+                    android:textColor="@color/colorGreen"
+                    app:layout_constraintEnd_toEndOf="@id/viewDottedLineOne"
+                    app:layout_constraintTop_toTopOf="@id/textViewWorkingHour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewShopTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:text="@string/label_shop_time"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="@id/textViewWorkingHour"
+                    app:layout_constraintTop_toBottomOf="@id/textViewWorkingHour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewWeekStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:text="@string/label_week_name"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="@id/textViewShopTime"
+                    app:layout_constraintTop_toBottomOf="@id/textViewShopTime" />
+
+                <View
+                    android:id="@+id/viewDottedLineTwo"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_7dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@drawable/line_dotted"
+                    app:layout_constraintEnd_toEndOf="@id/viewDottedLineOne"
+                    app:layout_constraintStart_toStartOf="@id/textViewWeekStatus"
+                    app:layout_constraintTop_toBottomOf="@id/textViewWeekStatus" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAppointmentDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:drawableStart="@drawable/ic_clock_black"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:text="@string/label_shop_date"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textViewReminder"
+                    app:layout_constraintStart_toStartOf="@id/viewDottedLineTwo"
+                    app:layout_constraintTop_toBottomOf="@id/viewDottedLineTwo" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewReminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_20dp"
+                    android:drawableStart="@drawable/ic_bell"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:text="@string/label_reminder"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/viewDottedLineTwo"
+                    app:layout_constraintStart_toEndOf="@id/textViewAppointmentDate"
+                    app:layout_constraintTop_toTopOf="@id/textViewAppointmentDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constrainLayoutShopDetail"
+                android:layout_width="@dimen/_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10dp"
+                android:background="@drawable/bg_recycle_view"
+                app:layout_constraintEnd_toEndOf="@id/constrainLayoutAppointmentDetail"
+                app:layout_constraintStart_toStartOf="@id/constrainLayoutAppointmentDetail"
+                app:layout_constraintTop_toBottomOf="@id/constrainLayoutAppointmentDetail">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewShopLocation"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_90dp"
+                    android:layout_margin="@dimen/_10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_map"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_50dp"
+                    android:layout_height="@dimen/_50dp"
+                    app:layout_constraintBottom_toBottomOf="@id/imageViewShopLocation"
+                    app:layout_constraintEnd_toEndOf="@id/imageViewShopLocation"
+                    app:layout_constraintStart_toStartOf="@id/imageViewShopLocation"
+                    app:layout_constraintTop_toTopOf="@id/imageViewShopLocation"
+                    app:srcCompat="@drawable/ic_marker" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewDirection"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_marginBottom="@dimen/_10dp"
+                    android:background="@drawable/ic_circle_white"
+                    android:padding="@dimen/_5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/imageViewShopLocation"
+                    app:layout_constraintEnd_toEndOf="@id/textViewWeather"
+                    app:srcCompat="@drawable/ic_direction" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:background="@drawable/bg_map_distance"
+                    android:gravity="center"
+                    android:padding="@dimen/_5dp"
+                    android:text="@string/label_distance"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewDirection"
+                    app:layout_constraintTop_toTopOf="@id/imageViewDirection" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewShopAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15dp"
+                    android:text="@string/label_shop_address"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintStart_toStartOf="@id/imageViewShopLocation"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewShopLocation" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewWeather"
+                    android:layout_width="@dimen/_30dp"
+                    android:layout_height="@dimen/_30dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:layout_marginEnd="@dimen/_5dp"
+                    app:layout_constraintEnd_toStartOf="@id/textViewWeather"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewShopLocation"
+                    app:srcCompat="@drawable/ic_weather" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewWeather"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:text="@string/label_weather"
+                    app:layout_constraintEnd_toEndOf="@id/imageViewShopLocation"
+                    app:layout_constraintTop_toTopOf="@id/imageViewWeather" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5dp"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginEnd="@dimen/_5dp"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/constrainLayoutShopDetail">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_20dp"
+                    android:backgroundTint="@color/colorLightBlack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_menu" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_10dp"
+                    android:backgroundTint="@color/colorGray"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewMenu"
+                    app:layout_constraintTop_toTopOf="@id/imageViewMenu"
+                    app:srcCompat="@drawable/ic_share_black" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30dp"
+                    android:drawableStart="@drawable/ic_comment"
+                    android:drawablePadding="@dimen/_10dp"
+                    android:text="@string/label_comment"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewShare"
+                    app:layout_constraintTop_toTopOf="@id/imageViewShare" />
+
+
+                <View
+                    android:id="@+id/viewLineHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3dp"
+                    android:layout_marginTop="@dimen/_10dp"
+                    android:background="@color/colorGray"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/imageViewShare" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/imageButtonCancel"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_0dp"
+                    android:background="@color/colorWhite"
+                    android:src="@drawable/ic_close_red"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/viewLineVertical"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewLineHorizontal" />
+
+                <View
+                    android:id="@+id/viewLineVertical"
+                    android:layout_width="@dimen/_3dp"
+                    android:layout_height="@dimen/_50dp"
+                    android:background="@color/colorGray"
+                    app:layout_constraintBottom_toBottomOf="@id/imageButtonCancel"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewCheck"
+                    app:layout_constraintStart_toEndOf="@id/imageButtonCancel"
+                    app:layout_constraintTop_toTopOf="@id/imageButtonCancel" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/imageViewCheck"
+                    android:layout_width="@dimen/_0dp"
+                    android:layout_height="@dimen/_0dp"
+                    android:background="@color/colorWhite"
+                    android:src="@drawable/ic_check"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/viewLineVertical"
+                    app:layout_constraintTop_toTopOf="@id/imageButtonCancel" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraintLayoutTrip"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10dp"
+    android:background="@drawable/bg_recycle_view">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewPersons"
+        android:layout_width="@dimen/_20dp"
+        android:layout_height="@dimen/_20dp"
+        android:layout_margin="@dimen/_20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_persons" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewMeetingMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        android:text="@string/label_international_trip"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintStart_toEndOf="@id/imageViewPersons"
+        app:layout_constraintTop_toTopOf="@id/imageViewPersons" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewTripMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5dp"
+        android:text="@string/demmy_trip_message"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/_16sp"
+        app:layout_constraintStart_toStartOf="@id/textViewMeetingMessage"
+        app:layout_constraintTop_toBottomOf="@id/textViewMeetingMessage" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:text="@string/label_date"
+        android:textColor="@color/colorLightBlack"
+        app:layout_constraintStart_toStartOf="@id/textViewMeetingMessage"
+        app:layout_constraintTop_toBottomOf="@id/textViewTripMessage" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/_15dp"
+        android:layout_height="@dimen/_15dp"
+        android:layout_marginStart="@dimen/_20dp"
+        app:layout_constraintBottom_toBottomOf="@id/textViewDate"
+        app:layout_constraintStart_toEndOf="@id/textViewDate"
+        app:layout_constraintTop_toTopOf="@id/textViewDate"
+        app:srcCompat="@drawable/ic_circle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewPersonName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:text="@string/label_task_add_person_name"
+        android:textColor="@color/colorLightBlack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewDate" />
+
+    <View
+        android:id="@+id/viewDottedLine"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_5dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:background="@drawable/line_dotted"
+        app:layout_constraintEnd_toEndOf="@id/textViewPersonName"
+        app:layout_constraintStart_toStartOf="@id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@id/textViewDate" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewPersonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/textViewDate"
+        app:layout_constraintTop_toBottomOf="@id/viewDottedLine"
+        app:srcCompat="@drawable/ic_person_one" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewPersonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="@id/imageViewPersonOne"
+        app:layout_constraintTop_toTopOf="@id/imageViewPersonOne"
+        app:srcCompat="@drawable/ic_person_two" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewPersonThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="@id/imageViewPersonTwo"
+        app:layout_constraintTop_toTopOf="@id/imageViewPersonOne"
+        app:srcCompat="@drawable/ic_person_three" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewPersonFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10dp"
+        app:layout_constraintStart_toStartOf="@id/imageViewPersonThree"
+        app:layout_constraintTop_toTopOf="@id/imageViewPersonOne"
+        app:srcCompat="@drawable/ic_person_four" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewPersonCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_home_text_view"
+        android:paddingStart="@dimen/_10dp"
+        android:paddingTop="@dimen/_2dp"
+        android:paddingEnd="@dimen/_10dp"
+        android:paddingBottom="@dimen/_2dp"
+        android:text="@string/label_number_of_person"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewPersonOne"
+        app:layout_constraintStart_toEndOf="@id/imageViewPersonFour"
+        app:layout_constraintTop_toTopOf="@id/imageViewPersonFour" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10dp"
+        android:drawableStart="@drawable/ic_comment"
+        android:drawablePadding="@dimen/_5dp"
+        android:text="@string/label_comment_count"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/textViewPersonCount" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainLayoutOptionMenu"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="@dimen/_0dp"
+        android:background="@drawable/bg_transparent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewDelete"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_marginTop="@dimen/_20dp"
+            app:layout_constraintBottom_toTopOf="@id/textViewDelete"
+            app:layout_constraintEnd_toStartOf="@id/imageViewComplete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            app:srcCompat="@drawable/ic_delete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_delete"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/imageViewDelete"
+            app:layout_constraintStart_toStartOf="@id/imageViewDelete"
+            app:layout_constraintTop_toBottomOf="@id/imageViewDelete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewComplete"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            app:layout_constraintEnd_toStartOf="@id/imageViewShare"
+            app:layout_constraintStart_toEndOf="@id/imageViewDelete"
+            app:layout_constraintTop_toTopOf="@id/imageViewDelete"
+            app:srcCompat="@drawable/ic_rigth_red" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_complete"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@id/imageViewComplete"
+            app:layout_constraintStart_toStartOf="@id/imageViewComplete"
+            app:layout_constraintTop_toBottomOf="@id/imageViewComplete"
+            app:layout_constraintTop_toTopOf="@id/textViewDelete" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewShare"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageViewComplete"
+            app:layout_constraintTop_toTopOf="@id/imageViewComplete"
+            app:srcCompat="@drawable/ic_share" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_share"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@id/imageViewShare"
+            app:layout_constraintStart_toStartOf="@id/imageViewShare"
+            app:layout_constraintTop_toBottomOf="@id/imageViewShare"
+            app:layout_constraintTop_toTopOf="@id/textViewComplete" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

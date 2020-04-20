@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">TimeCraft</string>
+    <string name="label_timecraft">TimeCraft</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_login">We Need Your Phone\n Number</string>
+    <string name="dummy_phone_number">(555) 555-5555</string>
+    <string name="message_tearm_condition"><![CDATA[By continuing you agree to\n Terms & Conditions and Privacy Policy]]></string>
+    <string name="label_phone_verification">Phone Verification</string>
+    <string name="message_otp_send">We have sent you an OTP code to \n +00 123 123 1234</string>
+    <string name="label_resend_code">Resend code</string>
+    <string name="hint_opt">-</string>
+    <string name="label_good_name">Your Good Name?</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="validation_username">Enter Username</string>
+    <string name="validation_mobile_empty">Enter Mobile Number</string>
+    <string name="validation_mobile">Enter Valid Mobile Number</string>
+    <string name="validation_email_empty">Enter Email Id</string>
+    <string name="validation_email">Enter Valid Email Id</string>
+    <string name="validation_password_empty">Enter Password</string>
+    <string name="validation_first_name">Enter First Name</string>
+    <string name="validation_last_name">Enter Last Name</string>
+    <string name="validation_country_code">Select Country Code</string>
+    <string name="validation_otp">Enter Otp</string>
+    <string name="label_december_2019">December 2019</string>
+    <string name="label_day_number">01</string>
+    <string name="label_day_name">Mon</string>
+    <string name="label_today">Today</string>
+    <string name="label_someday">Someday</string>
+    <string name="dummy_job_message">You Apply for a job a week ago but\n never got call back since</string>
+    <string name="label_date">2 Dec,2018</string>
+    <string name="dummy_meeting_message">Schedule meeting with all members</string>
+    <string name="label_number_of_person">+14 more</string>
+    <string name="label_international_trip">international Trip</string>
+    <string name="demmy_trip_message">We Will land in Dubai at 7:00 am</string>
+    <string name="label_task_add_person_name">- Added by Robert Mark</string>
+    <string name="label_weather">26</string>
+    <string name="label_address">3187 Hacker Street,Riverwood Avenue</string>
+    <string name="label_distance">3.5 km</string>
+    <string name="label_shop_name">Five Star Saloon</string>
+    <string name="dummy_appointment_message">We have schedule hair trimming \nappointment at Hacker Street Riverwood \nAvenue...View More</string>
+    <string name="label_delete">Delete</string>
+    <string name="label_complete">Complete</string>
+    <string name="label_share">share</string>
+    <string name="label_comment_count">36</string>
+    <string name="label_appoietment_message">We have schedule hair trimming appointment \nat Hacker Street Riverwood Avenue</string>
+    <string name="label_working_hours">Working Hours</string>
+    <string name="label_shop_time">Mon - Sat (7:00 am to 8:00 pm)</string>
+    <string name="label_week_name">Sunday <font color="#65727E">(Closed)</font></string>
+    <string name="label_shop_date">4 Dec, 2019</string>
+    <string name="label_reminder">No Reminder</string>
+    <string name="label_shop_address">Hacker Street Riverwood Avenue</string>
+    <string name="label_comment">26 • Comments</string>
+    <string name="label_open">Open</string>
+</resources>
